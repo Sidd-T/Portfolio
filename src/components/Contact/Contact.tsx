@@ -2,7 +2,7 @@
 
 import SectionTitle from "../Common/SectionTitle";
 import { useNavbar } from "@/context/NavbarContext";
-import ContactInfo from "./ContactForm";
+import ContactInfo from "./ContactInfo";
 
 
 const Contact = () => {
