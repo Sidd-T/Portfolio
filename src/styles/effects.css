@@ -610,3 +610,42 @@
   animation: paths 5s step-end infinite, opacity 5s step-end infinite,
     font 7s step-end infinite, movement 8s step-end infinite;
 }
+
+.fadeInFromBottom {
+  opacity: 0;  /* Initially invisible */
+  transform: translateY(50px);  /* Start off 50px below */
+  animation: fadeInBottom 1s forwards;  /* Apply animation */
+}
+
+@keyframes fadeInBottom {
+  to {
+    opacity: 1;  /* Make it fully visible */
+    transform: translateY(0);  /* Move to its original position */
+  }
+}
+
+.fadeInFromTop {
+  opacity: 0;  /* Initially invisible */
+  transform: translateY(-50px);  /* Start off 50px above */
+  animation: fadeInTop 1s forwards;  /* Apply animation */
+}
+
+@keyframes fadeInTop {
+  to {
+    opacity: 1;  /* Make it fully visible */
+    transform: translateY(0);  /* Move to its original position */
+  }
+}
+
+.fadeInFromLeft {
+  opacity: 0;  /* Initially invisible */
+  transform: translateX(-50px);  /* Start off 50px left */
+  animation: fadeInLeft 1s forwards;  /* Apply animation */
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;  /* Make it fully visible */
+    transform: translateX(0);  /* Move to its original position */
+  }
+}

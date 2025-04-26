@@ -6,6 +6,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 
+import "../../styles/effects.css";
+
 const Header = ({ navbarOpen, navbarToggleHandler }: { navbarOpen: boolean, navbarToggleHandler: () => void }) => {
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
@@ -23,7 +25,7 @@ const Header = ({ navbarOpen, navbarToggleHandler }: { navbarOpen: boolean, navb
 
   return (
     <header
-      className={`header z-40 flex w-full self-end items-center px-6 transition-all ${(navbarOpen) ? " duration-300 ": " duration-700 "} ${
+      className={`header fadeInFromTop z-40 flex w-full self-end items-center px-6 transition-all ${(navbarOpen) ? " duration-300 ": " duration-700 "} ${
         (sticky)
           ? "dark:bg-gray-dark dark:shadow-sticky-dark bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm fixed z-[1000]"
           : "absolute bg-transparent"
