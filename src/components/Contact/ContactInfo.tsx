@@ -10,13 +10,11 @@ const ContactInfo = () => {
 
   const CopyToClipboard = () => {
     const textToCopy:string = 'sidd.topiwala02@gmail.com';
-  
-    const handleCopy = () => {
-      navigator.clipboard.writeText(textToCopy)
-        .catch(err => {
-          console.error('Failed to copy: ', err);
-        });
-    };
+
+    navigator.clipboard.writeText(textToCopy)
+      .catch(err => {
+        console.error('Failed to copy: ', err);
+      });
   }
 
   return (
