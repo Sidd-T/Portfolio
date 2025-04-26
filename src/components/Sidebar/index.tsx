@@ -74,7 +74,7 @@ const Sidebar = ({ navbarOpen }: { navbarOpen: boolean }) => {
 
   return (
     <div
-      className={`fadeInFromTop xs:fixed sm:static overflow-y-auto scrollbar-hidden z-50 w-full h-full bg-gray-dark dark:shadow-sticky-dark transition-all duration-300 ${
+      className={`xs:fixed sm:static overflow-y-auto scrollbar-hidden z-50 w-full h-full bg-gray-dark dark:shadow-sticky-dark transition-all duration-300 ${
         navbarOpen ? "translate-x-0 opacity-100 xs:w-4/6 sm:w-full" : "-translate-x-full opacity-0 lg:w-0 lg:bg-opacity-100 lg:opacity-100 lg:top-0"
       } lg:translate-x-0`}
     >

@@ -23,7 +23,7 @@ const Hero = () => {
         id="home"
         className="relative z-10 overflow-hidden bg-[url(/images/light-wood.jpg)] pb-16 pt-[120px] dark:bg-[url(/images/charred-timber.jpg)] md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
       >
-        <div className="container fadeInFromTop">
+        <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">

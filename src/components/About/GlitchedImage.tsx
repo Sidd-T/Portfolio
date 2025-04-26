@@ -15,8 +15,17 @@ const GlitchedImage = () => {
   const closeLightbox = () => setWalletOpen(false);
 
   useEffect(() => {
-    console.log(walletOpen)
-  }, [walletOpen])
+    if (walletOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  
+    // Cleanup on unmount just in case
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [walletOpen]);
 
   return (
     <div className="w-full h-full flex flex-col">
