@@ -8,7 +8,7 @@ const Contact = () => {
 
   const paragraph: React.ReactNode = (
     <>
-      "I'm still making these sections, let me cook"
+      &quot;I&apos;m still making these sections, let me cook&quot;
     </>
   );
 

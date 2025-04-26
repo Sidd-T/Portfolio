@@ -29,7 +29,7 @@ const Card3 = ({ cardOpen }: { cardOpen: boolean }) => {
           <ul className={`${!cardOpen ? 'hidden' : ''} sm:space-y-2 pb-4`}>
             <li>
               <div className={`font-bold italic`}>
-                Bachelor's In Applied Science
+                Bachelor&apos;s In Applied Science
               </div>
             </li>
             <li>

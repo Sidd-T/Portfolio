@@ -10,7 +10,7 @@ const Contact = () => {
 
   const paragraph: React.ReactNode = (
     <>
-      "I haven't taken an IQ test yet, but I think I'm somewhere between the smartest and dumbest person on Earth."
+      &quot;Okay okay, let&apos;s contact this guy, let&apos;s contact this guy with email&quot;
     </>
   );
 

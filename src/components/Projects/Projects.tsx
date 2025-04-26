@@ -42,7 +42,7 @@ const Projects = () => {
 
   const paragraph: React.ReactNode = (
     <>
-      "I’m so twisted silly string is just like regular string to me"
+      &quot;I&apos;m so twisted silly string is just like regular string to me&quot;
     </>
   );
 

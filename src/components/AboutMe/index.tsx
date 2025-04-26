@@ -11,7 +11,7 @@ const AboutMe = () => {
 
   const paragraph: React.ReactNode = (
     <>
-      "I haven't taken an IQ test yet, but I think I'm somewhere between the smartest and dumbest person on Earth."
+      &quot;I haven&apos;t taken an IQ test yet, but I think I&apos;m somewhere between the smartest and dumbest person on Earth.&quot;
     </>
   );
 
