@@ -1,0 +1,62 @@
+.notebook-cover-2 {
+  background: linear-gradient(to right, #359e20 8%, #62f17a 20%, #0ea834 92%), url(http://www.transparenttextures.com/patterns/black-linen.png);
+  background-blend-mode: overlay;
+}
+
+.notebook-cover-3 {
+  background: linear-gradient(to right, #7719a3 8%, #a34fca 20%, #6c0d92 92%), url(http://www.transparenttextures.com/patterns/black-linen.png);
+  background-blend-mode: overlay;
+}
+
+.notebook-cover-1 {
+  background: linear-gradient(to right, #c91d1d 8%, #f16262 20%, #a80e0e 92%), url(http://www.transparenttextures.com/patterns/black-linen.png);
+  background-blend-mode: overlay;
+}
+
+.notebook-cover-0 {
+  background: linear-gradient(to right, #1dc3c9 8%, #62e7f1 20%, #0ea87a 92%), url(http://www.transparenttextures.com/patterns/black-linen.png);
+  background-blend-mode: overlay;
+}
+
+:root {
+  --main-line-color: hsl(234, 62%, 86%);
+  --side-line-color: hsl(350, 100%, 91%);
+  --paper-color: hsl(0, 15%, 95%);
+  --ink-color: hsl(0, 0%, 12%);
+  --line-thickness: 3px;
+  --top-space: 2lh;
+}
+
+.paper {
+  background: var(--paper-color);
+  margin: 2rem;
+  padding: calc(var(--top-space) - 0.5lh) 3rem 1rem 5.5rem;
+  font-family: system-ui;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--ink-color);
+  background-image: 
+    /* the red line */ linear-gradient(
+      90deg,
+      transparent,
+      transparent 4rem,
+      var(--side-line-color) 4rem,
+      var(--side-line-color) 4.25rem,
+      transparent 4.25rem
+    ),
+    /*  The top space  */
+      linear-gradient(
+        var(--paper-color),
+        var(--paper-color) var(--top-space),
+        transparent var(--top-space)
+      ),
+    /* the blue lines */
+      repeating-linear-gradient(
+        transparent,
+        transparent calc(1lh - var(--line-thickness)),
+        var(--main-line-color) calc(1lh - var(--line-thickness)),
+        var(--main-line-color) 1lh,
+        transparent 1lh
+      );
+  box-shadow: 0 0 1rem rgb(0 0 0 / 0.25);
+}

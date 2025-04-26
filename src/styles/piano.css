@@ -1,0 +1,20 @@
+.wood-2 {
+  background: linear-gradient(to right, #43372c 5%, #0d0202 80%, rgb(75, 75, 75) 90%), url(http://www.transparenttextures.com/patterns/wood-pattern.png);
+  background-blend-mode: overlay;
+}
+
+.wood {
+  background: linear-gradient(to right, #564e47 8%, #472f0f 20%, #271906 95%, rgb(75, 75, 75) 100%), url(http://www.transparenttextures.com/patterns/wood-pattern.png);
+  background-blend-mode: overlay;
+}
+
+/* Hide scrollbar but keep scrolling */
+.scrollbar-hidden {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer 10+ */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+

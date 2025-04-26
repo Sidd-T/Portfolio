@@ -1,0 +1,84 @@
+
+.leather-dark {
+  background: linear-gradient(to right, #271906 8%, #463f39 20%, #271906 92%), url(http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png);
+  background-blend-mode: overlay;
+}
+
+.leather-light {
+  background: linear-gradient(to right, #271906 8%, #463f39 20%, #271906 92%), url(http://www.transparenttextures.com/patterns/45-degree-fabric-light.png);
+  background-blend-mode: overlay;
+}
+
+.leather2-dark {
+  background: linear-gradient(to bottom, #523917 8%, #463f39 20%, #36270f 92%), url(http://www.transparenttextures.com/patterns/black-linen.png);
+  background-blend-mode: overlay;
+}
+
+.leather2-light {
+  background: linear-gradient(to bottom,#493719 10%, #664e2b 30%, #4b3c2f 50%, #382a12 92%), url(http://www.transparenttextures.com/patterns/black-linen.png);
+  background-blend-mode: overlay;
+}
+
+/* Angled top with the right side higher */
+.angled-top-right {
+  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Angled top with the left side higher */
+.angled-top-left {
+  -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+}
+
+.angled-top-right-inside {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+}
+
+.angled-top-left-inside {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+}
+
+.fadeInFromBottom {
+  opacity: 0;  /* Initially invisible */
+  transform: translateY(50px);  /* Start off 50px below */
+  animation: fadeInBottom 1s forwards;  /* Apply animation */
+}
+
+@keyframes fadeInBottom {
+  to {
+    opacity: 1;  /* Make it fully visible */
+    transform: translateY(0);  /* Move to its original position */
+  }
+}
+
+.dialog-text {
+  display: inline-block;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation:
+    typing 4s steps(40, end) forwards,
+    blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
