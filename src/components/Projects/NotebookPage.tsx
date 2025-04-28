@@ -65,7 +65,7 @@ const NotebookPage: React.FC<NotebookData> = ({ image, title, description, githu
         on={{ view: ({ index: currentIndex }) => setSelectedIndex(currentIndex) }}
       />
       <div 
-        className={`paper mx-auto w-[70vh] h-[90vh] bg-white rounded-xl shadow-[rgba(0,0,15,0.3)_10px_-4px_4px_3px] flex flex-col pb-[50%]
+        className={`paper scale-[60%] xs:scale-[90%] sm:scale-[100%] mx-auto w-[70vh] h-[90vh] bg-white rounded-xl shadow-[rgba(0,0,15,0.3)_10px_-4px_4px_3px] flex flex-col pb-[50%]
         border-l-8 border-2 border-[rgba(0,0,0,0.6)] relative`} // Add relative positioning to parent container
       >
         {/* Close Button */}

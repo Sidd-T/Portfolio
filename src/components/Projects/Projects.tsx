@@ -49,7 +49,7 @@ const Projects = () => {
   return (
     <>
       <section id="projects" className="py-10 bg-[url(/images/light-wood.jpg)] dark:bg-[url(/images/charred-timber.jpg)]">
-        <div className={`bg-transparent hover:bg-opacity-35 hover:bg-white hover:dark:bg-white/10 p-10 rounded-2xl transition-all duration-700 ${(navbarOpen) ? "mx-10 md:mx-16" : "mx-10 md:mx-28"}`}>
+        <div className={`bg-transparent hover:bg-opacity-35 hover:bg-white hover:dark:bg-white/10 p-2 sm:p6- md:p-10 rounded-2xl transition-all duration-700 ${(navbarOpen) ? "mx-10 md:mx-16" : "mx-2 sm:mx-10 md:mx-28"}`}>
           <SectionTitle
             title="Projects"
             paragraph={paragraph}
@@ -58,7 +58,7 @@ const Projects = () => {
           />
 
           <div className="w-full">
-            <div className="mt-8 mb-4 flex justify-center md:mb-12 lg:mb-16">
+            <div className="scale-[70%] sm:scale-[100%] mt-8 mb-4 flex justify-center md:mb-12 lg:mb-16">
               <span
                 onClick={() => setSoftwareProjects(true)}
                 className={`${
@@ -97,7 +97,7 @@ const Projects = () => {
             </div>
           </div>
 
-          <div ref={scrollableDivRef} className={`h-[100vh] no-scrollbar ${(selectedNotebook > 0) ? 'overflow-hidden' : 'overflow-auto'}`}>
+          <div ref={scrollableDivRef} className={`w-full h-[100vh] no-scrollbar ${(selectedNotebook > 0) ? 'overflow-hidden' : 'overflow-auto'}`}>
             <ProjectBookGrid 
               notebooks={(softwareProjects) ? softwareProjectsData : hardwareProjectsData} 
               selectedNotebook={selectedNotebook} 

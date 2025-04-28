@@ -29,7 +29,6 @@
 
 .paper {
   background: var(--paper-color);
-  margin: 2rem;
   padding: calc(var(--top-space) - 0.5lh) 3rem 1rem 5.5rem;
   font-family: system-ui;
   font-size: 1.5rem;
