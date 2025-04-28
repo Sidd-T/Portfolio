@@ -65,13 +65,13 @@ const Projects = () => {
                   softwareProjects
                     ? "pointer-events-none bg-gradient-to-r dark:from-[#00ff6a] dark:to-[#00d9ff] from-[#8300e7] to-[#0612ba] text-transparent bg-clip-text"
                     : "text-dark dark:text-white"
-                } mr-4 cursor-pointer text-3xl font-semibold ${orbitron.className}`}
+                } mr-4 cursor-pointer text-3xl font-semibold ${orbitron.className} ${selectedNotebook > 0 ? 'pointer-events-none' : ''}`}
               >
                 Software
               </span>
               <div
                 onClick={() => setSoftwareProjects(!softwareProjects)}
-                className="flex cursor-pointer items-center"
+                className={`flex cursor-pointer items-center ${selectedNotebook > 0 ? 'pointer-events-none' : ''}`}
               >
                 <div className="relative">
                   <div className="h-5 w-14 rounded-full bg-black shadow-inner"></div>
@@ -90,12 +90,14 @@ const Projects = () => {
                   softwareProjects
                     ? "text-dark dark:text-white"
                     : "pointer-events-none bg-gradient-to-r dark:from-[#00ff6a] dark:to-[#00d9ff] from-[#8300e7] to-[#0612ba] text-transparent bg-clip-text"
-                } ml-4 cursor-pointer text-3xl font-semibold ${orbitron.className}`}
+                } ml-4 cursor-pointer text-3xl font-semibold ${orbitron.className} ${selectedNotebook > 0 ? 'pointer-events-none' : ''}`}
               >
                 Hardware
               </span>
             </div>
           </div>
+
+
 
           <div ref={scrollableDivRef} className={`w-full h-[100vh] no-scrollbar ${(selectedNotebook > 0) ? 'overflow-hidden' : 'overflow-auto'}`}>
             <ProjectBookGrid 

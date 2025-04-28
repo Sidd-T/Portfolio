@@ -23,7 +23,7 @@ const ProjectBookGrid: React.FC<NotebookGridProps> = ({ notebooks, selectedNoteb
           className='dark:bg-white/25 bg-black/20 rounded-2xl h-full w-full absolute z-10 transition-all duration-300'
         >
           <div className='flex flex-col h-full fadeInFromBottom'>
-            <div className={`mx-auto transform`} style={{ transform: `translateY(${translate}vh) ${(window.innerWidth <= 400) ? 'translateX(-6.3rem)' : ''}` }}>
+            <div className={`mx-auto transform`} style={{ transform: `translateY(${translate}vh) ${(window.innerWidth <= 500) ? 'translateX(-4.3rem)' : ''} ${(window.innerWidth <= 400) ? 'translateX(-1rem)' : ''}` }}>
               <NotebookPage
                 image={notebooks[selectedNotebook-1].image}
                 title={notebooks[selectedNotebook-1].title}
