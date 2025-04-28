@@ -68,6 +68,10 @@ const Sidebar = ({ navbarOpen }: { navbarOpen: boolean }) => {
       const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
 
       window.scrollTo({top: y, behavior: 'smooth'});
+      //if on mobile, close sidebar after navigation
+      if (isSmallScreen) {
+        document.getElementById('navbarToggler').click();
+      }
     }
   };
 
