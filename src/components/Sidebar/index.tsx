@@ -74,8 +74,8 @@ const Sidebar = ({ navbarOpen }: { navbarOpen: boolean }) => {
 
   return (
     <div
-      className={`xs:fixed sm:static overflow-y-auto scrollbar-hidden z-50 w-full h-full bg-gray-dark dark:shadow-sticky-dark transition-all duration-300 ${
-        navbarOpen ? "translate-x-0 opacity-100 xs:w-4/6 sm:w-full" : "-translate-x-full opacity-0 lg:w-0 lg:bg-opacity-100 lg:opacity-100 lg:top-0"
+      className={`fixed xs:fixed sm:static overflow-y-auto scrollbar-hidden z-50 w-full h-full bg-gray-dark dark:shadow-sticky-dark transition-all duration-300 ${
+        navbarOpen ? "translate-x-0 opacity-100 w-5/6 xs:w-4/6 sm:w-full" : "-translate-x-full opacity-0 lg:w-0 lg:bg-opacity-100 lg:opacity-100 lg:top-0"
       } lg:translate-x-0`}
     >
       <div className="flex flex-row h-full">
@@ -93,7 +93,7 @@ const Sidebar = ({ navbarOpen }: { navbarOpen: boolean }) => {
                   {(menuItem?.title) ?
                     <button
                       onClick={() => handleScroll(menuItem.scrollPos)}
-                      className={`${orbitron.className} flex rounded-r-xl z-30 w-full px-5 py-8 text-lg lg:text-2xl bg-gradient-to-r from-gray-100 hover:from-green-500 hover:to-cyan-500 from-20% to-white to-50% dark:bg-gray-200 
+                      className={`${orbitron.className} flex rounded-r-xl z-30 w-full px-2 sm:px-5 py-8 text-lg lg:text-2xl bg-gradient-to-r from-gray-100 hover:from-green-500 hover:to-cyan-500 from-20% to-white to-50% dark:bg-gray-200 
                       ${"text-dark hover:text-white"}`}
                     >
                       {menuItem.title}

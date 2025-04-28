@@ -16,7 +16,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [navbarOpen, setNavbarOpen] = useState(true);
+  const [navbarOpen, setNavbarOpen] = useState(!(window.innerWidth <= 640));
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
   };

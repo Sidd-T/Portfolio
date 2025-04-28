@@ -7,7 +7,7 @@ const orbitron = Orbitron({ subsets: ['latin'] });
 
 const GlitchedCard = ({ cardOpen }: { cardOpen: boolean }) => {
   return (
-    <div className="glitch static-noise text-white rounded-2xl w-full h-full flex justify-center items-center">
+    <div className="glitch static-noise text-white rounded-2xl w-[40vh] xs:w-full h-full flex justify-center items-center">
       { cardOpen &&
         <div className="glitch__layers">
           <div className="glitch__layer static-noise"></div>

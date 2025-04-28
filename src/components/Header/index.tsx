@@ -9,8 +9,24 @@ import ThemeToggler from "./ThemeToggler";
 import "../../styles/effects.css";
 
 const Header = ({ navbarOpen, navbarToggleHandler }: { navbarOpen: boolean, navbarToggleHandler: () => void }) => {
-  // Sticky Navbar
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [sticky, setSticky] = useState(false);
+
+  // Check for small screen width on component mount
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 640);
+    };
+
+    handleResize(); // Run on initial load
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  // Sticky Navbar
   const handleStickyNavbar = () => {
     if (window.scrollY >= 80) {
       setSticky(true);
@@ -25,7 +41,7 @@ const Header = ({ navbarOpen, navbarToggleHandler }: { navbarOpen: boolean, navb
 
   return (
     <header
-      className={`header z-40 flex w-full self-end items-center px-6 transition-all ${(navbarOpen) ? " duration-300 ": " duration-700 "} ${
+      className={`header z-[999] flex w-full self-end items-center px-6 transition-all ${(navbarOpen) ? " duration-300 ": " duration-700 "} ${
         (sticky)
           ? "dark:bg-gray-dark dark:shadow-sticky-dark bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm fixed z-[1000]"
           : "absolute bg-transparent"
@@ -35,6 +51,9 @@ const Header = ({ navbarOpen, navbarToggleHandler }: { navbarOpen: boolean, navb
         }
         ${(navbarOpen && sticky)
           ? " transition lg:w-4/6" : ''
+        }
+        ${(navbarOpen && isSmallScreen) 
+          ? " dark:bg-gray-dark dark:shadow-sticky-dark bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm fixed z-[1000]": '' 
         }
       `}
     >

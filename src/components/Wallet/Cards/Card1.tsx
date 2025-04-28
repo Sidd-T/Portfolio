@@ -5,12 +5,11 @@ import Image from "next/image";
 
 const orbitron = Orbitron({ subsets: ['latin'] });
 
-// Sample data array for the list items, each containing JSX for labels and text
 const listItems = [
   { 
-    event: "Bar gig",
-    location: "Imperial Pub, Toronto",
-    date: "Feb 22, 5-7 pm"
+    event: "Tranzac Jam",
+    location: "The Tranzac, Toronto",
+    date: "May 25, 5-7 pm"
   },
   { 
     event: "FanExpo Community Zone Performance",
@@ -23,18 +22,18 @@ const Card1 = ({ cardOpen }: { cardOpen: boolean }) => {
   return (
     <div className=" bg-gradient-to-tr from-green-500 from-10% to-cyan-600 to-70% text-white rounded-2xl w-full h-full flex flex-col justify-start">
       <div className={`${orbitron.className} bg-[url('https://www.transparenttextures.com/patterns/escheresque.png')] bg-white/30
-      // xs:text-md md:text-lg xs:p-4 flex flex-row items-centers rounded-t-2xl
+      // text-xs xs:text-md md:text-lg p-1 xs:p-4 flex flex-row items-centers rounded-t-2xl
       // border-b border-cyan-900`}>
         <div className="mr-auto">
-          <Piano className="xs:text-md md:text-lg mr-2 self-center mb-1" />
-          {"Performances"}
+          <Piano className="text-xs xs:text-md md:text-lg mr-2 self-center mb-1" />
+          <span className="hidden xs:inline">{"Performances"}</span>
         </div>
-        <div>Music</div>
+        <div>{'Music'}</div>
       </div>
       
-      <div className="flex-grow rounded-b-2xl flex flex-row gap-8 items-start pt-4 bg-[url('https://www.transparenttextures.com/patterns/escheresque.png')]"> 
+      <div className="flex-grow overflow-auto sm:overflow-hidden rounded-b-2xl flex flex-row gap-8 items-start pt-4 bg-[url('https://www.transparenttextures.com/patterns/escheresque.png')]"> 
         {/* Right side: Image */}
-        <div className="ml-6 w-2/5 my-auto pb-[10%]">
+        <div className="hidden xs:inline xs:ml-6 xs:w-2/5 my-auto pb-[10%]">
           <Image
             src="/images/thelick.png" 
             alt="image on card"
@@ -46,13 +45,13 @@ const Card1 = ({ cardOpen }: { cardOpen: boolean }) => {
         </div>
 
         {/* Left side: List of event details */}
-        <div className="flex-grow flex flex-col gap-4 py-auto"> 
-          <div className={`${orbitron.className} ${cardOpen ? 'text-xl' : 'text-md'} font-bold border-b border-cyan-900`}>
+        <div className="flex-grow flex flex-col gap-4 py-auto mx-2 xs:mx-0"> 
+          <div className={`${orbitron.className} ${cardOpen ? 'text-md sm:text-xl' : 'text-xs xs:text-md'} font-bold border-b border-cyan-900`}>
           Upcoming Events
           </div>
           <ul className={`${!cardOpen ? 'hidden' : ''} space-y-2 mb-4`}>
             {listItems.map((item, index:number) => (
-              <li key={index} className="xs:text-sm md:text-md lg:text-xs xl:text-md 2xl:text-lg border-b border-cyan-800 mr-4 italic">
+              <li key={index} className="text-xs xs:text-sm md:text-md lg:text-xs xl:text-md 2xl:text-lg border-b border-cyan-800 mr-4 italic">
                 <div className="flex flex-row items-center"><strong className="italic text-gray-300 sx:text-md xs:text-sm w-2/5">Event:</strong><div className="w-3/5"> {item.event}</div></div>
                 <div className="flex flex-row items-center"><strong className="italic text-gray-300 sx:text-md xs:text-sm w-2/5">Location:</strong><div className="w-3/5"> {item.location}</div></div>
                 <div className="flex flex-row items-center"><strong className="italic text-gray-300 sx:text-md xs:text-sm w-2/5">Date:</strong><div className="w-3/5"> {item.date}</div></div>

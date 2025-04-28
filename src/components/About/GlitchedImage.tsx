@@ -59,7 +59,7 @@ const GlitchedImage = () => {
         </svg>
 
         <div
-          className="imgWrap max-w-[40vh] max-h-[40vh] scale-[65%] hover:scale-[100%] transition-all duration-700 rounded-lg"
+          className="imgWrap max-w-[20vh] max-h-[20vh] sm:max-w-[40vh] sm:max-h-[40vh] scale-[65%] hover:scale-[100%] transition-all duration-700 rounded-lg"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
           onClick={openLightbox}
