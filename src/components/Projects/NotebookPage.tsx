@@ -64,74 +64,77 @@ const NotebookPage: React.FC<NotebookData> = ({ image, title, description, githu
         index={selectedIndex}
         on={{ view: ({ index: currentIndex }) => setSelectedIndex(currentIndex) }}
       />
-      <div 
-        className={`paper scale-[60%] xs:scale-[90%] sm:scale-[100%] mx-auto w-[70vh] h-[90vh] bg-white rounded-xl shadow-[rgba(0,0,15,0.3)_10px_-4px_4px_3px] flex flex-col pb-[50%]
-        border-l-8 border-2 border-[rgba(0,0,0,0.6)] relative`} // Add relative positioning to parent container
-      >
-        {/* Close Button */}
-        <button
-          onClick={() => setSelectedNotebook(-1)}
-          className="absolute top-4 right-8 text-4xl font-bold text-gray-500 hover:text-gray-700 focus:outline-none"
+      <div className=''>
+        <div 
+          className={`paper scale-[60%] sm:scale-[90%] sm:scale-[90%] md:scale-[95%] mx-auto w-[70vh] h-[100vh] bg-white rounded-xl shadow-[rgba(0,0,15,0.3)_10px_-4px_4px_3px] flex flex-col pb-[50%]
+          border-l-8 border-2 border-[rgba(0,0,0,0.6)]`} // Add relative positioning to parent container
         >
-          &times;
-        </button>
-
-        <h2 className={`py-4 text-xl lg:text-2xl xl:text-3xl font-bold text-dark ${handlee.className}`}>{title}</h2>
-
-        <div className="w-full max-h rounded-xl py-1 flex flex-row items-center justify-between">
-          <button className='w-[5%]' onClick={changeIndexDown}>
-            <ArrowBackIosNew />
+          {/* Close Button */}
+          <button
+            onClick={() => setSelectedNotebook(-1)}
+            className="absolute top-4 right-8 text-4xl font-bold text-gray-500 hover:text-gray-700 focus:outline-none"
+          >
+            &times;
           </button>
-          <img
-            src={`${images[selectedIndex]}`}
-            alt={title}
-            className="w-auto h-auto max-w-[50vh] max-h-[32vh] object-contain rounded-xl inset-shadow-xl border-2 border-[rgba(0,0,0,0.3)] cursor-pointer"
-            onClick={() => setLightboxOpen(true)}
-          />
-          <button className='w-[5%]' onClick={changeIndexUp}>
-            <ArrowForwardIos />
-          </button>
-        </div>
 
-        <div className="py-4 px-6 h-[42%]">
-          <p className={`text-dark mt-2 h-full overflow-auto ${caveat.className}`}>{descriptionFull}</p>
-        </div>
+          <h2 className={`py-4 text-xl lg:text-2xl xl:text-3xl font-bold text-dark ${handlee.className}`}>{title}</h2>
 
-        <div className='mt-auto mb-6 flex flex-row gap-4'>
-          {(githubLink != "") ? 
-            <Link
-              href={githubLink}
-              className="inline-block w-1/2 rounded-xl bg-black/80 px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 hover:scale-105"
-            >
-              <span className="-ml-2 flex flex-row justify-center items-center gap-4">
-                <Image
-                  src={'/images/github.png'}
-                  alt="github logo"
-                  width={30}
-                  height={30}
-                  className="invert dark:block"
-                />
-                <span>View GitHub</span>
-              </span>
-            </Link>
-            : <></>
-          }
-          {(src != "") ? 
-            <Link
-              className="rounded-xl w-1/2 bg-gradient-to-r dark:from-green-600/80 dark:to-cyan-600/80 
-              from-[#8300e7]/80 hover:from-[#8300e7] dark:hover:from-green-600 dark:hover:to-cyan-600 to-[#0612ba]/80 hover:to-[#0612ba] px-8 py-4 
-              text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-105"
-              href={src}
-            >
-              <span className="-ml-2 flex flex-row justify-center items-center gap-4 shadow-2xl dark:shadow-green-500/50 shadow-indigo-500/50">
-                <span>Visit Project</span>
-              </span>
-            </Link>
-            : <></>
-          }
+          <div className="w-full max-h rounded-xl py-1 flex flex-row items-center justify-between">
+            <button className='w-[5%]' onClick={changeIndexDown}>
+              <ArrowBackIosNew />
+            </button>
+            <img
+              src={`${images[selectedIndex]}`}
+              alt={title}
+              className="w-auto h-auto max-w-[50vh] max-h-[32vh] object-contain rounded-xl inset-shadow-xl border-2 border-[rgba(0,0,0,0.3)] cursor-pointer"
+              onClick={() => setLightboxOpen(true)}
+            />
+            <button className='w-[5%]' onClick={changeIndexUp}>
+              <ArrowForwardIos />
+            </button>
+          </div>
+
+          <div className="py-4 px-6 h-[42%]">
+            <p className={`text-dark mt-2 h-full overflow-auto ${caveat.className}`}>{descriptionFull}</p>
+          </div>
+
+          <div className='mt-auto mb-6 flex flex-row gap-4'>
+            {(githubLink != "") ? 
+              <Link
+                href={githubLink}
+                className="inline-block w-1/2 rounded-xl bg-black/80 px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 hover:scale-105"
+              >
+                <span className="-ml-2 flex flex-row justify-center items-center gap-4">
+                  <Image
+                    src={'/images/github.png'}
+                    alt="github logo"
+                    width={30}
+                    height={30}
+                    className="invert dark:block"
+                  />
+                  <span>View GitHub</span>
+                </span>
+              </Link>
+              : <></>
+            }
+            {(src != "") ? 
+              <Link
+                className="rounded-xl w-1/2 bg-gradient-to-r dark:from-green-600/80 dark:to-cyan-600/80 
+                from-[#8300e7]/80 hover:from-[#8300e7] dark:hover:from-green-600 dark:hover:to-cyan-600 to-[#0612ba]/80 hover:to-[#0612ba] px-8 py-4 
+                text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-105"
+                href={src}
+              >
+                <span className="-ml-2 flex flex-row justify-center items-center gap-4 shadow-2xl dark:shadow-green-500/50 shadow-indigo-500/50">
+                  <span>Visit Project</span>
+                </span>
+              </Link>
+              : <></>
+            }
+          </div>
+          
         </div>
-        
       </div>
+      
     </>
     
   );
