@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -16,10 +16,20 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [navbarOpen, setNavbarOpen] = useState(true);
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
   };
+
+  // Check for small screen width on component mount
+  useEffect(() => {
+    const isSmall = window.innerWidth <= 500;
+    setIsSmallScreen(isSmall);
+    if (isSmall) {
+      setNavbarOpen(false);
+    }
+  }, []);
 
   return (
     <html suppressHydrationWarning lang="en">
