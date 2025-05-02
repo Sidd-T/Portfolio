@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import { Metadata } from "next";
 import Contact from "@/components/Contact/Contact";
 import Music from "@/components/Music/Music";
+import GameDev from "@/components/GameDev/GameDev";
 
 export const metadata: Metadata = {
   title: "Portfolio n. 510",
@@ -21,6 +22,7 @@ export default function Home() {
       <AboutMe />
       <Projects />
       <Music/>
+      <GameDev/>
       <Contact />
       </div>
     </>
