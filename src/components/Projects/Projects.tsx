@@ -134,6 +134,7 @@ const Projects = () => {
                       src={notebooks[selectedNotebook - 1].src || ''}
                       setSelectedNotebook={setSelectedNotebook}
                       images={notebooks[selectedNotebook - 1].images || []}
+                      menuID={notebooks[selectedNotebook - 1].menuID || 0}
                     />
                   </div>
                 </div>

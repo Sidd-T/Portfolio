@@ -7,4 +7,5 @@ export type NotebookData = {
   src?: string;
   setSelectedNotebook?: Function;
   images?: string[];
+  menuID?: number | undefined;
 }

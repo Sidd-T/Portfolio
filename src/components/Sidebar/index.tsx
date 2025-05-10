@@ -1,20 +1,23 @@
 "use client";
 
-import menuData from "../Header/menuData";
+import menus from "../Header/menuData";
 import { useState, useEffect, useRef } from "react";
 import "../../styles/piano.css";
 import "../../styles/effects.css";
 import { Orbitron } from "next/font/google";
+import { useMenu } from "@/context/MenuContext";
 
 const orbitron = Orbitron({subsets: ['latin']})
 
 const Sidebar = ({ navbarOpen }: { navbarOpen: boolean }) => {
+  const { menuDataID } = useMenu();
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   // Check for small screen width on component mount
   useEffect(() => {
+
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 640); // 640px is the default breakpoint for 'sm' in Tailwind
+      setIsSmallScreen(window.innerWidth <= 640);
     };
 
     handleResize(); // Run on initial load
@@ -25,7 +28,7 @@ const Sidebar = ({ navbarOpen }: { navbarOpen: boolean }) => {
     };
   }, []);
 
-  const [maxVisibleItems, setMaxVisibleItems] = useState(menuData.length);
+  const [maxVisibleItems, setMaxVisibleItems] = useState((menus[menuDataID]).length);
   const sampleItemRef = useRef(null);
 
   useEffect(() => {
@@ -86,7 +89,7 @@ const Sidebar = ({ navbarOpen }: { navbarOpen: boolean }) => {
         <div className="w-[90%]">
           <h2 className="px-5 p-5 sm:py-14 wood rounded-br-lg border-b-4 border-black text-xl font-bold text-black dark:text-white"></h2>
           <ul>
-            {menuData.slice(0, maxVisibleItems).map((menuItem, index) => {
+            {(menus[menuDataID]).slice(0, maxVisibleItems).map((menuItem, index) => {
               // Generate dynamic ID based on index and keyType
               const leftId = `${index + 0.5}`;
               const rightId = `${index - 0.5}`;

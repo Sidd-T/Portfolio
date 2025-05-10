@@ -85,8 +85,9 @@ export const hardwareProjectsData: NotebookData[] = [
         and how to specifically make it yourself, with links to Digikey for specific components. Also check out the Github for an LTSpice file for the entire synth.
       </>
     ),
-    src: '/DIY-Analog-Synth',
-    images: ['/images/projects/synth/main.jpg', '/images/projects/synth/alternate1.jpg', '/images/projects/synth/alternate2.jpg', '/images/projects/synth/topdown.jpg']
+    src: '/analog-synth',
+    images: ['/images/projects/synth/main.jpg', '/images/projects/synth/alternate1.jpg', '/images/projects/synth/alternate2.jpg', '/images/projects/synth/topdown.jpg'],
+    menuID: 1,
   },
 
 ];

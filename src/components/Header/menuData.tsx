@@ -1,5 +1,67 @@
 import { Menu } from "@/types/menu";
 
+const synthMenuData: Menu[] = [
+  {
+    id: 0,
+    keyType: "NONE",
+    note: "C",
+  },
+  {
+    id: 1,
+    title: "About",
+    scrollPos: "about",
+    keyType: "LEFT",
+    note: "B",
+  },
+  {
+    id: 2,
+    title: "MIDI-CV",
+    scrollPos: "midicv",
+    keyType: "BETWEEN",
+    note: "A",
+  },
+  {
+    id: 3,  
+    title: "VCO",
+    scrollPos: 'vco',
+    keyType: "BETWEEN",
+    note: "G",
+  },
+  {
+    id: 4,
+    title: "VCF",
+    scrollPos: 'vcf',
+    keyType: "RIGHT",
+    note: "F",
+  },
+  {
+    id: 5,
+    title: "ADSR",
+    scrollPos: "adsr",
+    keyType: "LEFT",
+    note: "E",
+  },
+  {
+    id: 6,
+    title: "VCA",
+    scrollPos: "vca",
+    keyType: "BETWEEN",
+    note: "D",
+  },
+  {
+    id: 7,
+    title: "Results",
+    scrollPos: "results",
+    keyType: "RIGHT",
+    note: "C",
+  },
+  {
+    id: 8,
+    keyType: "LEFT",
+    note: "B",
+  },
+]
+
 const menuData: Menu[] = [
   {
     id: 0,
@@ -367,4 +429,10 @@ const menuData: Menu[] = [
     note: "F",
   },
 ];
-export default menuData;
+
+const menus: Array<Menu[]> = [
+  menuData,
+  synthMenuData
+]
+
+export default menus;

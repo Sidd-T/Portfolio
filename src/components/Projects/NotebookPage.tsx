@@ -3,6 +3,7 @@ import "../../styles/notebook.css";
 import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
 import { NotebookData } from '../../types/notebook';
+import { useMenu } from '@/context/MenuContext';
 import { Caveat, Handlee } from 'next/font/google';
 
 import NextJsImage from '../Lightbox/NextJSImage';
@@ -20,10 +21,11 @@ const handlee = Handlee({weight: '400', subsets: ['latin']} );
 
 import { ArrowBackIosNew, ArrowForwardIos } from '@mui/icons-material';
 
-const NotebookPage: React.FC<NotebookData> = ({ image, title, description, githubLink, descriptionFull, src, setSelectedNotebook, images }) => {
+const NotebookPage: React.FC<NotebookData> = ({ image, title, description, githubLink, descriptionFull, src, setSelectedNotebook, images, menuID }) => {
 
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [lightboxOpen, setLightboxOpen] = useState<boolean>(false);  
+  const { menuDataID, menuHandler } = useMenu();
 
   const slides:StaticImageData[] = [];
   images.forEach((image:string) => {
@@ -123,6 +125,7 @@ const NotebookPage: React.FC<NotebookData> = ({ image, title, description, githu
                 from-[#8300e7]/80 hover:from-[#8300e7] dark:hover:from-green-600 dark:hover:to-cyan-600 to-[#0612ba]/80 hover:to-[#0612ba] px-8 py-4 
                 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-105"
                 href={src}
+                onClick={() => menuHandler(menuID)}
               >
                 <span className="-ml-2 flex flex-row justify-center items-center gap-4 shadow-2xl dark:shadow-green-500/50 shadow-indigo-500/50">
                   <span>Visit Project</span>
