@@ -8,6 +8,7 @@ import Sidebar from "@/components/Sidebar"; // Import Sidebar
 import { Inter } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
+import { usePathname } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +17,25 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+  const getMenuID = (path:string) => {
+    
+    let menuID = 0;
+    if (path === '/analog-synth') {
+      menuID = 1;
+    }
+
+    return menuID;
+  }
+
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
   const [navbarOpen, setNavbarOpen] = useState<boolean>(true);
-  const [menuDataID, setMenuDataID] = useState<number>(0)
+  const path = usePathname();
+  const [menuDataID, setMenuDataID] = useState<number>(getMenuID(path))
+
+  useEffect(() => {
+    menuHandler(getMenuID(path))
+  }, [path])
 
   const menuHandler = (menuID:number) => {
     setMenuDataID(menuID);
