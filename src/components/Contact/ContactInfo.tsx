@@ -33,7 +33,7 @@ const ContactInfo = () => {
               </defs>
             </svg>
             <div className="sticky-content cursor-pointer" onClick={CopyToClipboard}>
-              <p className={`mb-12 text-base !leading-relaxed text-dark sm:text-xl md:text-2xl ${caveat.className}`}>
+              <p className={`mb-12 text-base !leading-relaxed text-dark sm:text-xl md:text-xl 2xl:text-2xl ${caveat.className}`}>
                 Email (click to copy): <br></br>
                 <span 
                   className="bg-gradient-to-r dark:from-[#00ff6a] dark:to-[#00d9ff] from-[#8300e7] to-[#0612ba] hero glitch layers" 
