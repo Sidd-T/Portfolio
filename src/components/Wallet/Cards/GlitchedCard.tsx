@@ -15,7 +15,7 @@ const GlitchedCard = ({ cardOpen }: { cardOpen: boolean }) => {
           <div className="glitch__layer static-noise"></div>
         </div>
       }
-      <div className={`${!cardOpen ? "hidden" : ""} ${orbitron.className} text-4xl bg-white hero glitch1 layers`}  data-text="510">510</div>
+      <div className={`${!cardOpen ? "hidden" : ""} ${orbitron.className} text-4xl bg-white hero glitch1 layers`}  data-text="Spades">Spades</div>
     </div>
   );
 };

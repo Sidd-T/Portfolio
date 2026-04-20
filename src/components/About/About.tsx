@@ -34,7 +34,7 @@ const About = () => {
               <div className="mx-auto max-w-[800px] text-center">
                 <h1 className={`${orbitron.className} mb-5 text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight`}>
                   {" "} 
-                  <span className={`bg-gradient-to-r dark:from-[#00ff6a] dark:to-[#00d9ff] from-[#8300e7] to-[#0612ba] hero glitch layers`} data-text="Portfolio n. 51">
+                  <span className={`bg-gradient-to-r dark:from-[#00ff6a] dark:to-[#00d9ff] from-[#8300e7] to-[#0612ba] hero glitch layers`} data-text="SYNTH">
                     DIY ANALOG SYNTHESIZER
                   </span> 
                 </h1>

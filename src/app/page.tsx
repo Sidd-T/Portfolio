@@ -8,7 +8,7 @@ import Music from "@/components/Music/Music";
 import GameDev from "@/components/GameDev/GameDev";
 
 export const metadata: Metadata = {
-  title: "Portfolio n. 510",
+  title: "Portfolio of Spades",
   description: "my portfolio website",
   // other metadata
 };
