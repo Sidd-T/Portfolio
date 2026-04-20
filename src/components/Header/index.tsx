@@ -62,10 +62,10 @@ const Header = ({ navbarOpen, navbarToggleHandler }: { navbarOpen: boolean, navb
           <div className="w-60 max-w-full px-4 xl:mr-12">
             <Link
               href="/"
-              className={`header-logo block w-full ${sticky ? "py-5 lg:py-2" : "py-8"}`}
+              className={`header-logo scale-125 block w-full ${sticky ? "py-5 lg:py-2" : "py-8"}`}
             >
               <Image
-                src="/images/logo/n510.png"
+                src="/images/logo/spades.png"
                 alt="logo"
                 width={140}
                 height={30}

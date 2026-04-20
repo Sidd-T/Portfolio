@@ -3,8 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// @ts-ignore
 import "../../styles/glitch.css";
-import "../../styles/effects.css";
+// @ts-ignore
+import "../../styles/effects.css"; 
 
 import { Orbitron } from "next/font/google";
 import { useNavbar } from "@/context/NavbarContext";
@@ -28,14 +30,14 @@ const Hero = () => {
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
                 <h1 className={`${orbitron.className} mb-5 text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight`}>
-                  {"Portfolio "} 
-                  <span className={`translate-y-1 bg-gradient-to-r dark:from-[#00ff6a] dark:to-[#00d9ff] from-[#8300e7] to-[#0612ba] hero glitch layers`} data-text="Portfolio n. 51">
-                    n. 510
+                  {"Portfolio of "} 
+                  <span className={`translate-y-1 bg-gradient-to-r dark:from-[#00ff6a] dark:to-[#00d9ff] from-[#8300e7] to-[#0612ba] hero glitch layers`} data-text="Spades">
+                    Spades
                   </span> 
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-dark dark:text-body-color-dark sm:text-lg md:text-xl">
                   Hi, I&apos;m{" "}
-                  <span className="bg-gradient-to-r dark:from-[#00ff6a] dark:to-[#00d9ff] from-[#8300e7] to-[#0612ba] hero glitch layers" data-text="R̴̢̮͘E̵͎̓D̸̟͊͘A̴Ć̴̯͇̏T̶͓̃̚ͅË̸̪D̴̞̉͠">{"████████"}</span>, 
+                  <span className="bg-gradient-to-r translate-y-1 dark:from-[#00ff6a] dark:to-[#00d9ff] from-[#8300e7] to-[#0612ba] hero glitch layers" data-text="R̴̢̮͘E̵͎̓D̸̟͊͘A̴Ć̴̯͇̏T̶͓̃̚ͅË̸̪D̴̞̉͠">{"Spades"}</span>, 
                   a developer, engineer, jazz pianist, and music producer from 
                   <span className="bg-gradient-to-r dark:from-[#00ff6a] dark:to-[#00d9ff] from-[#8300e7] to-[#0612ba] hero glitch layers" data-text="R̴̢̮͘E̵͎̓D̸̟͊͘A̴Ć̴̯͇̏T̶͓̃̚ͅË̸̪D̴̞̉͠">{"███████"}</span>. 
                   This site includes work in software, hardware, music, SFX, sheet music, and game dev. Check out my projects by opening the sidebar.
@@ -45,7 +47,7 @@ const Hero = () => {
                     className="rounded-xl bg-gradient-to-r dark:from-green-600 dark:to-cyan-600 from-[#8300e7] to-[#0612ba] px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:scale-105"
                     onClick={navbarToggleHandler}
                   >
-                    <span className="-ml-2 flex flex-row justify-center items-center gap-4 shadow-2xl dark:shadow-green-500/50 shadow-indigo-500/50">
+                    <span className="-ml-2 flex flex-row jusf6atify-center items-center gap-4 shadow-2xl dark:shadow-green-500/50 shadow-indigo-500/50">
                       <Piano className="text-3xl dark:block" /> {/* Scaled icon */}
                       <span>Toggle Piano Sidebar</span>
                     </span>

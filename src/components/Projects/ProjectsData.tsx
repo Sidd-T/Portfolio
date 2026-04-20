@@ -3,22 +3,52 @@ import { NotebookData } from "@/types/notebook";
 
 export const softwareProjectsData: NotebookData[] = [
   {
-    image: '/images/projects/mapper/mapper1.png',
-    title: 'Map App',
-    description: 'A mapping application made with C++, OpenStreetMap, and GTK',
-    githubLink: '',
+    image: '/images/projects/spades-place/cafe.png',
+    title: 'Spades\' Place',
+    description: 'Created a digital cafe with a working public MIDI Piano.',
+    githubLink: 'https://github.com/Sidd-T/spades-place',
     descriptionFull: (
       <>
-        Proposed and implemented a complete mapper software using C++, OpenStreetMap (OSM), and gtk in a team of 3.<br></br><br></br>
-        Conducted State of the Art Reviews on current GIS software to discover relevant features to include. <br></br><br></br>
-        Used Git to manage the project and communicate updates to teammate and created an associated business pitch with the app.
-        <br></br><br></br>
-        Due to academic integrity reasons, this project cannot be uploaded to a public github repo.
+        Created a personal site with a integrated chatbox and public MIDI Piano. <br></br><br></br>
+        Used Supabase for user auth and profile creation. Users can create a profile with a profile picture, and then play connect a midi device to play to other users on the site. <br></br><br></br>
+        This site is always under construction, and is expanding to have blogs, tutorials, games, and more.
+      </>
+    ),
+    src: 'https://spades.place.neocities.org',
+    images: ['/images/projects/spades-place/cafe.png', '/images/projects/spades-place/landing.png', '/images/projects/spades-place/home.png', '/images/projects/spades-place/windows.png', '/images/projects/spades-place/windows2.png']
+  },
+  {
+    image: '/images/projects/ktane/main.png',
+    title: 'Keep Talking and Nobody Explodes Equalizer Mod',
+    description: 'Created a Mod for the game Keep Talking and Nobody Explodes (KTANE) in Unity',
+    githubLink: 'https://github.com/Sidd-T/KTANE-Equalizer',
+    descriptionFull: (
+      <>
+        Created, implemented, and published a mod for the game “Keep Talking and Nobody Explodes”. <br></br><br></br>
+        Involved creating a module on Unity, and using C# scripts to implement the module on the base game. Also created a “manual page” with HTML, 
+        using CSS files given with the game for style and formatting.
       </>
     ),
     src: '',
-    images: ['/images/projects/mapper/mapper1.png', '/images/projects/mapper/mapper2.png']
+    images: ['/images/projects/ktane/main.png', '/images/projects/ktane/module.png', '/images/projects/ktane/solved.png', '/images/projects/ktane/manual.png', '/images/projects/ktane/manual2.png', '/images/projects/ktane/manual3.png']
   },
+  // {
+  //   image: '/images/projects/mapper/mapper1.png',
+  //   title: 'Map App',
+  //   description: 'A mapping application made with C++, OpenStreetMap, and GTK',
+  //   githubLink: '',
+  //   descriptionFull: (
+  //     <>
+  //       Proposed and implemented a complete mapper software using C++, OpenStreetMap (OSM), and gtk in a team of 3.<br></br><br></br>
+  //       Conducted State of the Art Reviews on current GIS software to discover relevant features to include. <br></br><br></br>
+  //       Used Git to manage the project and communicate updates to teammate and created an associated business pitch with the app.
+  //       <br></br><br></br>
+  //       Due to academic integrity reasons, this project cannot be uploaded to a public github repo.
+  //     </>
+  //   ),
+  //   src: '',
+  //   images: ['/images/projects/mapper/mapper1.png', '/images/projects/mapper/mapper2.png']
+  // },
   {
     image: '/images/projects/p-classifier/main.png',
     title: 'AI Pokémon Classifier',
@@ -50,21 +80,6 @@ export const softwareProjectsData: NotebookData[] = [
     ),
     src: 'https://jazz.skule.ca/',
     images: ['/images/projects/skulejazz/home.png', '/images/projects/skulejazz/gallery.png']
-  },
-  {
-    image: '/images/projects/ktane/main.png',
-    title: 'Keep Talking and Nobody Explodes Equalizer Mod',
-    description: 'Created a Mod for the game Keep Talking and Nobody Explodes (KTANE) in Unity',
-    githubLink: 'https://github.com/Sidd-T/KTANE-Equalizer',
-    descriptionFull: (
-      <>
-        Created, implemented, and published a mod for the game “Keep Talking and Nobody Explodes”. <br></br><br></br>
-        Involved creating a module on Unity, and using C# scripts to implement the module on the base game. Also created a “manual page” with HTML, 
-        using CSS files given with the game for style and formatting.
-      </>
-    ),
-    src: '',
-    images: ['/images/projects/ktane/main.png', '/images/projects/ktane/module.png', '/images/projects/ktane/solved.png', '/images/projects/ktane/manual.png', '/images/projects/ktane/manual2.png', '/images/projects/ktane/manual3.png']
   },
 ];
 
