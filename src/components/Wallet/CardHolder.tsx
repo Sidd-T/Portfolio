@@ -46,7 +46,7 @@ const CardHolder = ({ leftSide, setCardOpenIdx, setSignedCardOpenIdx }: { leftSi
     >
       {/* Stack the angled divs */}
       {Array.from({ length: numDivs }).map((_, index:number) => (
-        <>
+        <React.Fragment key={leftSide ? `left-${index}` : `right-${index}`}>
           <div
             key={(leftSide) ? (index+1) : -1*(index+1)} // need unique indices
             className={`w-[99%] h-[65%] mx-auto absolute ${leftSide ? "angled-top-left" : "angled-top-right"} bg-[#2e210b]`}
@@ -75,7 +75,7 @@ const CardHolder = ({ leftSide, setCardOpenIdx, setSignedCardOpenIdx }: { leftSi
               <WalletCard index={index} cardOpen={false} leftSide={leftSide}/>
             </div>
           }
-        </>
+        </React.Fragment>
       ))}
     </div>
   );

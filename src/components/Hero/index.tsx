@@ -36,9 +36,9 @@ const Hero = () => {
                   </span> 
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-dark dark:text-body-color-dark sm:text-lg md:text-xl">
-                  Hi, I&apos;m{" "}
-                  <span className="bg-gradient-to-r translate-y-1 dark:from-[#00ff6a] dark:to-[#00d9ff] from-[#8300e7] to-[#0612ba] hero glitch layers" data-text="R̴̢̮͘E̵͎̓D̸̟͊͘A̴Ć̴̯͇̏T̶͓̃̚ͅË̸̪D̴̞̉͠">{"Spades"}</span>, 
-                  a developer, engineer, jazz pianist, and music producer from 
+                  {'Hi, I\'m '}
+                  <span className="bg-gradient-to-r dark:from-[#00ff6a] dark:to-[#00d9ff] from-[#8300e7] to-[#0612ba] hero glitch layers" data-text="R̴̢̮͘E̵͎̓D̸̟͊͘A̴Ć̴̯͇̏T̶͓̃̚ͅË̸̪D̴̞̉͠">{"Spades"}</span>, 
+                  {' a developer, engineer, jazz pianist, and music producer from '}
                   <span className="bg-gradient-to-r dark:from-[#00ff6a] dark:to-[#00d9ff] from-[#8300e7] to-[#0612ba] hero glitch layers" data-text="R̴̢̮͘E̵͎̓D̸̟͊͘A̴Ć̴̯͇̏T̶͓̃̚ͅË̸̪D̴̞̉͠">{"███████"}</span>. 
                   This site includes work in software, hardware, music, SFX, sheet music, and game dev. Check out my projects by opening the sidebar.
                 </p>

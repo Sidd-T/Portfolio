@@ -24,12 +24,12 @@ const Card4 = ({ cardOpen }: { cardOpen: boolean }) => {
         {/* Left side: details */}
         <div className="flex-grow flex flex-col gap-4 my-auto pb-[40%] sm:pt-[5%] md:pt-0 lg:pt-0 2xl:pt-[5%] pl-2 sm: pl-8"> 
           <div className={`${orbitron.className} ${cardOpen ? 'text-xs sm:text-xl' : 'text-xs sm:text-md'} font-bold border-b border-purple-900`}>
-          Software Development, 2 years of professional experience (contact for resume)
+          Software Development, 3 years of professional experience (contact for resume)
           </div>
           <ul className={`${!cardOpen ? 'hidden' : ''} sm:space-y-2 pb-4`}>
             <li>
               <div className={`font-bold italic text-xs sm:text-md`}>
-                Frontend (React/JS/TS), Backend (C#/.NET), Mobile/Cross Platform (Flutter)
+                Frontend (React/JS/TS), Backend (C#/.NET/SQL/Nodejs), Mobile/Cross Platform (Flutter)
               </div>
             </li>
             <li>
@@ -40,14 +40,14 @@ const Card4 = ({ cardOpen }: { cardOpen: boolean }) => {
             </li>
             <li>
               <div className="flex flex-row items-center italic text-xs sm:text-md">
-                <strong className="xs:text-black sm:text-gray-300 lg:text-black xl:text-gray-300 sm:text-md xs:text-sm w-2/5">Music:</strong>
-                <div className="xs:text-black sm:text-white lg:text-black xl:text-white w-3/5"> {`Certificate from UofT, Completed RCM`}</div>
+                <strong className="text-gray-300 sm:text-md xs:text-sm w-2/5">Music:</strong>
+                <div className="w-3/5"> {`Certificate from UofT, Completed RCM`}</div>
               </div>
             </li>
             <li>
               <div className="flex flex-row items-center italic text-xs sm:text-md">
-                <strong className=" xs:text-black sm:text-gray-300 lg:text-black xl:text-gray-300 sm:text-md xs:text-sm w-2/5">Other:</strong>
-                <div className="w-3/5 xs:text-black sm:text-white lg:text-black xl:text-white w-3/5"> {`Python, MatLab, Unity, Godot, Esri ArcGIS`}</div>
+                <strong className="text-gray-300 sm:text-md xs:text-sm w-2/5">Other:</strong>
+                <div className="w-3/5"> {`Python, MatLab, Unity, Godot, Esri ArcGIS`}</div>
               </div>
             </li>
           </ul>

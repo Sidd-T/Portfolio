@@ -32,23 +32,6 @@ export const softwareProjectsData: NotebookData[] = [
     src: '',
     images: ['/images/projects/ktane/main.png', '/images/projects/ktane/module.png', '/images/projects/ktane/solved.png', '/images/projects/ktane/manual.png', '/images/projects/ktane/manual2.png', '/images/projects/ktane/manual3.png']
   },
-  // {
-  //   image: '/images/projects/mapper/mapper1.png',
-  //   title: 'Map App',
-  //   description: 'A mapping application made with C++, OpenStreetMap, and GTK',
-  //   githubLink: '',
-  //   descriptionFull: (
-  //     <>
-  //       Proposed and implemented a complete mapper software using C++, OpenStreetMap (OSM), and gtk in a team of 3.<br></br><br></br>
-  //       Conducted State of the Art Reviews on current GIS software to discover relevant features to include. <br></br><br></br>
-  //       Used Git to manage the project and communicate updates to teammate and created an associated business pitch with the app.
-  //       <br></br><br></br>
-  //       Due to academic integrity reasons, this project cannot be uploaded to a public github repo.
-  //     </>
-  //   ),
-  //   src: '',
-  //   images: ['/images/projects/mapper/mapper1.png', '/images/projects/mapper/mapper2.png']
-  // },
   {
     image: '/images/projects/p-classifier/main.png',
     title: 'AI Pokémon Classifier',
@@ -80,6 +63,23 @@ export const softwareProjectsData: NotebookData[] = [
     ),
     src: 'https://jazz.skule.ca/',
     images: ['/images/projects/skulejazz/home.png', '/images/projects/skulejazz/gallery.png']
+  },
+  {
+    image: '/images/projects/mapper/mapper1.png',
+    title: 'Map App',
+    description: 'A mapping application made with C++, OpenStreetMap, and GTK',
+    githubLink: '',
+    descriptionFull: (
+      <>
+        Proposed and implemented a complete mapper software using C++, OpenStreetMap (OSM), and gtk in a team of 3.<br></br><br></br>
+        Conducted State of the Art Reviews on current GIS software to discover relevant features to include. <br></br><br></br>
+        Used Git to manage the project and communicate updates to teammate and created an associated business pitch with the app.
+        <br></br><br></br>
+        Due to academic integrity reasons, this project cannot be uploaded to a public github repo.
+      </>
+    ),
+    src: '',
+    images: ['/images/projects/mapper/mapper1.png', '/images/projects/mapper/mapper2.png']
   },
 ];
 
