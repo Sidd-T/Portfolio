@@ -143,7 +143,6 @@
 
 .hero {
   line-height: 1;
-  display: inline-block;
   z-index: 2;
   color: transparent; /* Make the text color transparent */
   -webkit-background-clip: text; /* Clip the gradient to the text */

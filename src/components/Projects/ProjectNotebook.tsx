@@ -1,4 +1,4 @@
-import React, { ReactNode, useMemo } from 'react';
+import React, { ReactNode, useState, useEffect } from 'react';
 import "../../styles/notebook.css";
 
 import { Orbitron } from 'next/font/google';
@@ -16,8 +16,12 @@ interface NotebookProps {
 }
 
 const ProjectNotebook: React.FC<NotebookProps> = ({ index, image, title, description, coverNum, setSelectedNotebook }) => {
-  // Memoize the random rotation to prevent it from changing on every re-render
-  const randomRotation = useMemo(() => `${Math.floor(Math.random() * 5)}deg`, []);
+  // Generate random rotation only on client after hydration
+  const [randomRotation, setRandomRotation] = useState('0deg');
+  
+  useEffect(() => {
+    setRandomRotation(`${Math.floor(Math.random() * 5)}deg`);
+  }, []);
 
   return (
     <div 

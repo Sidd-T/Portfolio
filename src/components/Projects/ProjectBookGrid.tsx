@@ -10,9 +10,6 @@ interface NotebookGridProps {
 
 const ProjectBookGrid: React.FC<NotebookGridProps> = ({ notebooks, setSelectedNotebook }) => {
 
-  let translate = 0
-  console.log(translate);
-
   return (
     <div className="relative">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 p-4">
