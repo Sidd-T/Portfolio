@@ -14,7 +14,7 @@ export const softwareProjectsData: NotebookData[] = [
         This site is always under construction, and is expanding to have blogs, tutorials, games, and more.
       </>
     ),
-    src: 'https://spades.place.neocities.org',
+    src: 'https://spades-place.neocities.org',
     images: ['/images/projects/spades-place/cafe.png', '/images/projects/spades-place/landing.png', '/images/projects/spades-place/home.png', '/images/projects/spades-place/windows.png', '/images/projects/spades-place/windows2.png']
   },
   {
