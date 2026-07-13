@@ -1,4 +1,4 @@
-# Portfolio [www.spades.top](www.spades.top)
+# Portfolio: [www.spades.top](www.spades.top)
 
 My personal website for all my projects in software, hardware, music, and more
 
