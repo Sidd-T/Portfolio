@@ -1,6 +1,6 @@
 "use client";
 
-import menus from "../Header/menuData";
+import menus, { smallScreenMenus } from "../Header/menuData";
 import { useState, useEffect, useRef } from "react";
 import "../../styles/piano.css";
 import "../../styles/effects.css";
@@ -12,12 +12,15 @@ const orbitron = Orbitron({subsets: ['latin']})
 const Sidebar = ({ navbarOpen }: { navbarOpen: boolean }) => {
   const { menuDataID } = useMenu();
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const sidebarRef = useRef<HTMLDivElement>(null);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const sampleItemRef = useRef<HTMLLIElement>(null);
 
   // Check for small screen width on component mount
   useEffect(() => {
 
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 640);
+      setIsSmallScreen(window.innerWidth < 992);
     };
 
     handleResize(); // Run on initial load
@@ -29,21 +32,33 @@ const Sidebar = ({ navbarOpen }: { navbarOpen: boolean }) => {
   }, []);
 
   const [maxVisibleItems, setMaxVisibleItems] = useState((menus[menuDataID]).length);
-  const sampleItemRef = useRef(null);
 
   useEffect(() => {
     const updateVisibleItems = () => {
-      const content = document.getElementById('content');
-      const footer = document.getElementById('footermain');
+      const sidebar = sidebarRef.current;
+      const heading = headingRef.current;
       const sampleItem = sampleItemRef.current;
 
-      if (content && footer && sampleItem) {
-        const contentHeight = content.offsetHeight;
-        const footerHeight = footer.offsetHeight;
+      if (sidebar && heading && sampleItem) {
         const itemHeight = sampleItem.offsetHeight;
 
-        const itemsThatFit = Math.floor((contentHeight+footerHeight) / itemHeight);
-        setMaxVisibleItems(isSmallScreen ? 8 : itemsThatFit);
+        if (isSmallScreen) {
+          const availableHeight = sidebar.clientHeight - heading.offsetHeight;
+          setMaxVisibleItems(
+            Math.min(
+              smallScreenMenus[menuDataID].length,
+              Math.floor(availableHeight / itemHeight),
+            ) + 1
+          );
+        } else {
+          const content = document.getElementById('content');
+          const footer = document.getElementById('footermain');
+
+          if (content && footer) {
+            const itemsThatFit = Math.floor((content.offsetHeight + footer.offsetHeight) / itemHeight);
+            setMaxVisibleItems(itemsThatFit);
+          }
+        }
       }
     }
     
@@ -57,7 +72,7 @@ const Sidebar = ({ navbarOpen }: { navbarOpen: boolean }) => {
     return () => {
       window.removeEventListener('resize', updateVisibleItems);
     };
-  }, [isSmallScreen]);
+  }, [isSmallScreen, menuDataID]);
 
   // State to track the hovered ID
   const [hoveredId, setHoveredId] = useState<string | null>(null);
@@ -81,15 +96,16 @@ const Sidebar = ({ navbarOpen }: { navbarOpen: boolean }) => {
 
   return (
     <div
-      className={`fixed xs:fixed sm:static overflow-y-auto scrollbar-hidden z-50 w-full h-full bg-gray-dark dark:shadow-sticky-dark transition-all duration-300 ${
-        navbarOpen ? "translate-x-0 opacity-100 w-5/6 xs:w-4/6 sm:w-full" : "-translate-x-full opacity-0 lg:w-0 lg:bg-opacity-100 lg:opacity-100 lg:top-0"
+      ref={sidebarRef}
+      className={`fixed lg:static overflow-y-auto scrollbar-hidden z-50 w-full h-full bg-gray-dark dark:shadow-sticky-dark transition-all duration-300 ${
+        navbarOpen ? "translate-x-0 opacity-100 w-full sm:w-4/6 md:w-1/2 lg:w-full" : "-translate-x-full opacity-0 lg:w-0 lg:bg-opacity-100 lg:opacity-100 lg:top-0"
       } lg:translate-x-0`}
     >
       <div className="flex flex-row h-full">
         <div className="w-[90%]">
-          <h2 className="px-5 p-5 sm:py-14 wood rounded-br-lg border-b-4 border-black text-xl font-bold text-black dark:text-white"></h2>
+          <h2 ref={headingRef} className="px-5 py-14 wood rounded-br-lg border-b-4 border-black text-xl font-bold text-black dark:text-white"></h2>
           <ul>
-            {(menus[menuDataID]).slice(0, maxVisibleItems).map((menuItem, index) => {
+            {(isSmallScreen ? smallScreenMenus[menuDataID] : menus[menuDataID]).slice(0, maxVisibleItems).map((menuItem, index) => {
               // Generate dynamic ID based on index and keyType
               const leftId = `${index + 0.5}`;
               const rightId = `${index - 0.5}`;

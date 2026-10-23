@@ -430,9 +430,112 @@ const menuData: Menu[] = [
   },
 ];
 
+const smallScreenMenuData: Menu[] = [
+  {
+    id: 0,
+    keyType: "NONE",
+    note: "C",
+  },
+  {
+    id: 1,
+    title: "About Me",
+    scrollPos: "aboutme",
+    keyType: "LEFT",
+    note: "B",
+  },
+  {
+    id: 2,
+    title: "Software/Hardware",
+    scrollPos: "projects",
+    keyType: "BETWEEN",
+    note: "A",
+  },
+  {
+    id: 3,  
+    title: "Music/SFX",
+    scrollPos: 'music',
+    keyType: "BETWEEN",
+    note: "G",
+  },
+  {
+    id: 4,
+    title: "Game Dev",
+    scrollPos: 'gamedev',
+    keyType: "RIGHT",
+    note: "F",
+  },
+  {
+    id: 5,
+    title: "Contact",
+    scrollPos: "contact",
+    keyType: "LEFT",
+    note: "E",
+  },
+  {
+    id: 6,
+    keyType: "BETWEEN",
+    note: "D",
+  },
+  {
+    id: 7,
+    keyType: "RIGHT",
+    note: "C",
+  },
+  {
+    id: 8,
+    keyType: "LEFT",
+    note: "B",
+  },
+  {
+    id: 9,
+    keyType: "BETWEEN",
+    note: "A",
+  },
+  {
+    id: 10,  
+    keyType: "BETWEEN",
+    note: "G",
+  },
+  {
+    id: 11,
+    keyType: "RIGHT",
+    note: "F",
+  },
+  {
+    id: 12,
+    keyType: "LEFT",
+    note: "E",
+  },
+  {
+    id: 13,
+    keyType: "BETWEEN",
+    note: "D",
+  },
+  {
+    id: 14,
+    keyType: "RIGHT",
+    note: "C",
+  },
+  {
+    id: 15,
+    keyType: "LEFT",
+    note: "B",
+  },
+  {
+    id: 16,
+    keyType: "BETWEEN",
+    note: "A",
+  },
+]
+
 const menus: Array<Menu[]> = [
   menuData,
   synthMenuData
+]
+
+export const smallScreenMenus: Array<Menu[]> = [
+  smallScreenMenuData,
+  synthMenuData,
 ]
 
 export default menus;
