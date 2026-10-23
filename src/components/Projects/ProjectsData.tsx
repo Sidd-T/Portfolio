@@ -16,7 +16,7 @@ export const softwareProjectsData: NotebookData[] = [
         The app is open source and available on GitHub. <br></br><br></br>
       </>
     ),
-    src: 'jam-app-tau.vercel.app',
+    src: 'https://jam-app-tau.vercel.app',
     images: ['/images/projects/openchords/oc1.png', '/images/projects/openchords/oc2.png', '/images/projects/openchords/oc3.png', '/images/projects/openchords/oc4.png', '/images/projects/openchords/oc5.png']
   },
   {

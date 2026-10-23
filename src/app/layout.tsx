@@ -47,7 +47,7 @@ export default function RootLayout({
 
   // Check for small screen width on component mount
   useEffect(() => {
-    const isSmall = window.innerWidth <= 640;
+    const isSmall = window.innerWidth <= 995;
     setIsSmallScreen(isSmall);
     if (!isSmall) {
       document.getElementById('navbarToggler').click();
