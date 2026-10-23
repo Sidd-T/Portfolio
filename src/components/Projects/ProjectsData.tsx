@@ -3,6 +3,23 @@ import { NotebookData } from "@/types/notebook";
 
 export const softwareProjectsData: NotebookData[] = [
   {
+    image: '/images/projects/openchords/oc1.png',
+    title: 'OpenChords',
+    description: 'An Open Source, Cross PlatformReal Book and Jam Session App',
+    githubLink: 'https://github.com/Sidd-T/JamApp',
+    descriptionFull: (
+      <>
+        Created a cross platform app for musicians to view and play jazz standards. <br></br><br></br>
+        Used React Native with Expo to create a cross platform app for iOS, Android, and Web. <br></br><br></br>
+        The app has a built in real book with over 400 jazz standards, a create mode for users to make their own sheets, 
+        and a jam session mode where users can connect to others in a LAN network and create custom jam setlists. <br></br><br></br>
+        The app is open source and available on GitHub. <br></br><br></br>
+      </>
+    ),
+    src: 'jam-app-tau.vercel.app',
+    images: ['/images/projects/openchords/oc1.png', '/images/projects/openchords/oc2.png', '/images/projects/openchords/oc3.png', '/images/projects/openchords/oc4.png', '/images/projects/openchords/oc5.png']
+  },
+  {
     image: '/images/projects/spades-place/cafe.png',
     title: 'Spades\' Place',
     description: 'Created a digital cafe with a working public MIDI Piano.',
@@ -63,23 +80,6 @@ export const softwareProjectsData: NotebookData[] = [
     ),
     src: 'https://jazz.skule.ca/',
     images: ['/images/projects/skulejazz/home.png', '/images/projects/skulejazz/gallery.png']
-  },
-  {
-    image: '/images/projects/mapper/mapper1.png',
-    title: 'Map App',
-    description: 'A mapping application made with C++, OpenStreetMap, and GTK',
-    githubLink: '',
-    descriptionFull: (
-      <>
-        Proposed and implemented a complete mapper software using C++, OpenStreetMap (OSM), and gtk in a team of 3.<br></br><br></br>
-        Conducted State of the Art Reviews on current GIS software to discover relevant features to include. <br></br><br></br>
-        Used Git to manage the project and communicate updates to teammate and created an associated business pitch with the app.
-        <br></br><br></br>
-        Due to academic integrity reasons, this project cannot be uploaded to a public github repo.
-      </>
-    ),
-    src: '',
-    images: ['/images/projects/mapper/mapper1.png', '/images/projects/mapper/mapper2.png']
   },
 ];
 

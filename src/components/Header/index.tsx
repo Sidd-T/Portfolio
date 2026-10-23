@@ -47,13 +47,10 @@ const Header = ({ navbarOpen, navbarToggleHandler }: { navbarOpen: boolean, navb
           : "absolute bg-transparent"
         }
         ${(navbarOpen && !sticky)
-          ? " transition lg:w-4/6 lg:bg-transparent lg:dark:bg-transparent lg:dark:shadow-none lg:bg-transparent lg:!bg-opacity-100 lg:shadow-none lg:backdrop-blur-0" : ''
+          ? " transition lg:w-4/6 lg:bg-transparent lg:dark:bg-transparent lg:dark:shadow-none lg:!bg-opacity-100 lg:shadow-none lg:backdrop-blur-0" : ''
         }
         ${(navbarOpen && sticky)
           ? " transition lg:w-4/6" : ''
-        }
-        ${(navbarOpen && isSmallScreen) 
-          ? " dark:bg-gray-dark dark:shadow-sticky-dark bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm fixed z-[1000]": '' 
         }
       `}
     >

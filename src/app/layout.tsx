@@ -63,12 +63,12 @@ export default function RootLayout({
             <NavbarProvider navbarOpen={navbarOpen} navbarToggleHandler={navbarToggleHandler}>
               <div className="flex min-h-screen min-w-screen">
                 {/* Sidebar */}
-                <div className={`flex ${navbarOpen ? 'sm:w-1/2 lg:w-2/6' : 'w-0'} transition-all duration-300`}>
+                <div className={`flex ${navbarOpen ? 'lg:w-2/6' : 'w-0'} transition-all duration-300`}>
                   <Sidebar navbarOpen={navbarOpen} />
                 </div>
                 
                 {/* Main content section */}
-                <div id="all-content" className={`bg-[url(/images/light-wood.jpg)] dark:bg-[url(/images/charred-timber.jpg)] flex flex-col w-full transition-all  ${navbarOpen ? 'sm:w-1/2 lg:w-4/6 duration-700' : 'duration-300'}`}>
+                <div id="all-content" className={`bg-[url(/images/light-wood.jpg)] dark:bg-[url(/images/charred-timber.jpg)] flex flex-col w-full transition-all  ${navbarOpen ? 'lg:w-4/6 duration-700' : 'duration-300'}`}>
                   <Header navbarOpen={navbarOpen} navbarToggleHandler={navbarToggleHandler} />
 
                   {/* Main content */}
